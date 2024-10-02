@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fábio & Giovana - Nosso Casamento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #f5e5d5;
+            --text-color: #333333;
+            --accent-color: #d4a373;
+            --white: #ffffff;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Raleway', sans-serif;
+            color: var(--text-color);
+            background-color: var(--white);
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        .section {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 60px 20px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #hero {
+            background-image: url('https://image.freepik.com/free-photo/couple-love-enjoying-tender-moments-together-outdoors_1150-3690.jpg');
+        }
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        #hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 1;
+            color: var(--white);
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        p {
+            line-height: 1.6;
+            max-width: 600px;
+            text-align: center;
+            margin: 0 auto 20px;
+        }
+        .btn {
+            padding: 12px 24px;
+            background-color: var(--accent-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        .btn:hover {
+            background-color: var(--text-color);
+        }
+        #location, #gifts {
+            background-color: var(--primary-color);
+        }
+        #countdown {
+            background-color: var(--white);
+        }
+        #timer {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .time-unit {
+            font-size: 3em;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+        footer {
+            background-color: var(--text-color);
+            color: var(--white);
+            text-align: center;
+            padding: 20px 0;
+        }
+        .couple-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5em;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 20px 0;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .content-wrapper {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#location">Local</a></li>
+            <li><a href="#gifts">Presentes</a></li>
+            <li><a href="#countdown">Contagem</a></li>
+        </ul>
+    </nav>
+
+    <div id="hero" class="section parallax">
+        <h1>Fábio & Giovana</h1>
+    </div>
+    
+    <div id="about" class="section fade-in">
+        <div class="content-wrapper">
+            <h2>Nossa História</h2>
+            <p>Bem-vindos ao nosso site de casamento! Estamos emocionados em compartilhar este momento especial com vocês. Aqui você encontrará todas as informações importantes sobre nossa celebração.</p>
+            <a href="#" class="btn" download>Manual dos Padrinhos</a>
+        </div>
+    </div>
+    
+    <div id="location" class="section fade-in parallax" style="background-image: url('/api/placeholder/1200/800');">
+        <div class="content-wrapper">
+            <h2>Local da Cerimônia</h2>
+            <p>PR-170, 10937-10871 - Jardim Recanto dos Palmares, Apucarana - PR, 86803-570</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.9518712452917!2d-51.47301132456786!3d-23.266995579484476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ecba7eadf94b7b%3A0x775d8c4661d177f0!2sPR-170%2C%2010937-10871%20-%20Jardim%20Recanto%20dos%20Palmares%2C%20Apucarana%20-%20PR%2C%2086803-570!5e0!3m2!1spt-BR!2sbr!4v1696207068345!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <div id="gifts" class="section fade-in parallax" style="background-image: url('/api/placeholder/1200/800');">
+        <div class="content-wrapper">
+            <h2>Lista de Presentes</h2>
+            <p>Sua presença é o nosso maior presente, mas se desejar nos presentear, ficaremos muito gratos.</p>
+            <a href="#" class="btn" target="_blank">Ver Lista de Presentes</a>
+        </div>
+    </div>
+
+    <div id="countdown" class="section fade-in">
+        <div class="content-wrapper">
+            <h2>Contagem Regressiva</h2>
+            <div id="timer">
+                <div>
+                    <span class="time-unit" id="days"></span>
+                    <p>Dias</p>
+                </div>
+                <div>
+                    <span class="time-unit" id="hours"></span>
+                    <p>Horas</p>
+                </div>
+                <div>
+                    <span class="time-unit" id="minutes"></span>
+                    <p>Minutos</p>
+                </div>
+                <div>
+                    <span class="time-unit" id="seconds"></span>
+                    <p>Segundos</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="couple-name">Fábio & Giovana</p>
+        <p>8 de março de 2025 às 16:00</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Countdown timer
+        const weddingDate = new Date("2025-03-08T16:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").textContent = days;
+            document.getElementById("hours").textContent = hours;
+            document.getElementById("minutes").textContent = minutes;
+            document.getElementById("seconds").textContent = seconds;
+
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                document.getElementById("timer").innerHTML = "O grande dia chegou!";
+            }
+        }
+
+        updateCountdown();
+        const countdownTimer = setInterval(updateCountdown, 1000);
+
+        // Fade-in effect
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -100px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('appear');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+        // Sticky navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        // Parallax effect
+        window.addEventListener('scroll', function() {
+            const parallax = document.querySelectorAll('.parallax');
+            let scrollPosition = window.pageYOffset;
+
+            parallax.forEach(background => {
+                let offset = background.offsetTop;
+                background.style.backgroundPositionY = (offset - scrollPosition) * 0.7 + "px";
+            });
+        });
+    </script>
+</body>
+</html>
